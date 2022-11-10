@@ -1,7 +1,7 @@
 # Task 1. Exploraring a dataset
 import pandas as pd
 
-air_quality = pd.read_csv('airquality.csv')
+air_quality = pd.read_csv('data/airquality.csv')
 
 print('Question 1. What are the column names of the data frame?')
 print(air_quality.columns.values)
