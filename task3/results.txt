@@ -1,0 +1,11 @@
+Question 1. How many routes have rating more than 4.9
+318
+Question 2. How many routes are “Good for kids” (hint: you can use (unnest function)?
+694
+Question 3. Which unique features can routes have?
+['Dogs allowed on leash', 'Wildlife', 'Good for kids', 'Lakes', 'Fall foliage', 'Ridges/passes', 'Established campsites', 'Mountain views', 'Old growth', 'Waterfalls', 'Wildflowers/Meadows', 'Rivers', 'Dogs not allowed', 'Coast', 'Summits']
+Question 4. What is the most common rating of a route?
+0.0    1152
+Name: rating, dtype: int64
+Question 5. Your own question and answer: how many routes have 'Mount Rainier Area' location?
+942

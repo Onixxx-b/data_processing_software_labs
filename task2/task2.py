@@ -10,7 +10,7 @@ print('Part 1')
 def pollutantmean(directory, pollutant, ids):
     if isinstance(ids, int):
         ids = [ids]
-    file = pd.concat([pd.read_csv('data/' + directory + '/' + format(i, "03d") + ".csv") for i in ids])
+    file = pd.concat([pd.read_csv('../data/' + directory + '/' + format(i, "03d") + ".csv") for i in ids])
     mean = file[pollutant].mean()
     return mean
 
@@ -28,7 +28,7 @@ def complete(directory, ids):
         ids = [ids]
     result_data = []
     for i in ids:
-        file = pd.read_csv('data/' + directory + '/' + format(i, "03d") + ".csv").dropna()
+        file = pd.read_csv('../data/' + directory + '/' + format(i, "03d") + ".csv").dropna()
         result_data.append([i, len(file.index)])
     col_names = ["id", "nobs"]
     print(tabulate(result_data, headers=col_names))
@@ -43,7 +43,7 @@ print("Part 3")
 
 
 def corr(directory, threshold):
-    files = [pd.read_csv('data/' + directory + "/" + file).dropna() for file in os.listdir('data/' + directory)]
+    files = [pd.read_csv('../data/' + directory + "/" + file).dropna() for file in os.listdir('../data/' + directory)]
     corrs = []
     for file in files:
         if len(file.index) > threshold:

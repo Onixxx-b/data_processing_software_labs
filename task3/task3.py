@@ -1,7 +1,7 @@
 # Task 3. Tidying data
 import pandas as pd
 
-hike_data = pd.read_csv('data/hike_long.csv')
+hike_data = pd.read_csv('../data/hike_long.csv')
 
 # Tidying dataset
 # Create a new dataset clean_hike_trails with the next updates:
