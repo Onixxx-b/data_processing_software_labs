@@ -1,0 +1,67 @@
+1. Merges the training and the test sets to create one data set.
+       tBodyAcc-mean()-X  tBodyAcc-mean()-Y  ...  subjectId  activityId
+0               0.288585          -0.020294  ...          1           5
+1               0.278419          -0.016411  ...          1           5
+2               0.279653          -0.019467  ...          1           5
+3               0.279174          -0.026201  ...          1           5
+4               0.276629          -0.016570  ...          1           5
+...                  ...                ...  ...        ...         ...
+14699           0.299665          -0.057193  ...         30           2
+14700           0.273853          -0.007749  ...         30           2
+14701           0.273387          -0.017011  ...         30           2
+14702           0.289654          -0.018843  ...         30           2
+14703           0.351503          -0.012423  ...         30           2
+
+[14704 rows x 563 columns]
+
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+       tBodyAcc-mean()-X  ...  fBodyBodyGyroJerkMag-std()
+0               0.288585  ...                   -0.990697
+1               0.278419  ...                   -0.996399
+2               0.279653  ...                   -0.995127
+3               0.279174  ...                   -0.995237
+4               0.276629  ...                   -0.995465
+...                  ...  ...                         ...
+14699           0.299665  ...                   -0.723951
+14700           0.273853  ...                   -0.771183
+14701           0.273387  ...                   -0.726372
+14702           0.289654  ...                   -0.689421
+14703           0.351503  ...                   -0.745120
+
+[14704 rows x 66 columns]
+
+3. Uses descriptive activity names to name the activities in the data set
+       tBodyAcc-mean()-X  tBodyAcc-mean()-Y  ...  activityId      activityType
+0               0.288585          -0.020294  ...           5          STANDING
+1               0.278419          -0.016411  ...           5          STANDING
+2               0.279653          -0.019467  ...           5          STANDING
+3               0.279174          -0.026201  ...           5          STANDING
+4               0.276629          -0.016570  ...           5          STANDING
+...                  ...                ...  ...         ...               ...
+14699           0.299665          -0.057193  ...           2  WALKING_UPSTAIRS
+14700           0.273853          -0.007749  ...           2  WALKING_UPSTAIRS
+14701           0.273387          -0.017011  ...           2  WALKING_UPSTAIRS
+14702           0.289654          -0.018843  ...           2  WALKING_UPSTAIRS
+14703           0.351503          -0.012423  ...           2  WALKING_UPSTAIRS
+
+[14704 rows x 564 columns]
+
+4. Appropriately labels the data set with descriptive variable names
+Already done before merging datasets (see merged dataset in first task)
+
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+                      tBodyAcc-mean()-X  ...  angle(Z,gravityMean)
+subjectId activityId                     ...
+1         1                    0.277331  ...              0.068859
+          2                    0.255462  ...              0.074166
+          3                    0.289188  ...              0.065005
+          4                    0.261238  ...             -0.218017
+          5                    0.278918  ...              0.012253
+...                                 ...  ...                   ...
+30        2                    0.271416  ...              0.037391
+          3                    0.283191  ...              0.001391
+          4                    0.268336  ...             -0.227535
+          5                    0.277113  ...              0.004700
+          6                    0.281034  ...             -0.507020
+
+[126 rows x 561 columns]
