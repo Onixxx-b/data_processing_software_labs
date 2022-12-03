@@ -35,4 +35,4 @@ plt.legend(labels=['Count of books'])
 # Show first 15 books with 5 stars and availability more than 10
 ax = data[(data['Stars'] == 5) & (data['Availability'] > 10)].plot(x='Title', y='Price', kind='barh')
 ax.set_ylim([0, 15])
-# plt.show()
+plt.show()
